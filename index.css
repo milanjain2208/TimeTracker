@@ -5,6 +5,7 @@
 }
 body {
     background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
 }
 .container {
     width: 80%;
@@ -113,6 +114,12 @@ body {
     display: grid;
     grid-template-rows: 1fr 2fr;
     padding: 0.7em;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.card-details:hover {
+    background-color: hsl(235, 41%, 30%);
 }
 
 .card-header {
@@ -120,6 +127,19 @@ body {
     color: white;
     justify-content: space-between;
     align-items: center;
+    font-weight: 500;
+}
+
+.card-options {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card-options:hover {
+    background-color: rgb(241, 236, 236, 0.2);
 }
 
 .card-stats {
@@ -132,6 +152,7 @@ body {
 .current {
     color: white;
     font-size: 3.5em;
+    font-weight: 300;
 }
 
 .previous {
