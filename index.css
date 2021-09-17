@@ -131,7 +131,7 @@ body {
 
 .current {
     color: white;
-    font-size: 30px;
+    font-size: 3.5em;
 }
 
 .previous {
@@ -146,6 +146,17 @@ body {
 .svgs:hover {
     width: 90;
     height: 90;
+}
+.timeframe {
+    color:rgb(206, 206, 206);
+    cursor: pointer;
+}
+.timeframe:hover {
+    color: white;
+}
+
+.color-white{
+    color: white;
 }
 
 

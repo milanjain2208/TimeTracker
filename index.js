@@ -1,14 +1,22 @@
 window.onload = function() {
-    const workCurrent = document.querySelector(".work .current");
-    const workPrevious = document.querySelector(".work .previous");
-    const playCurrent = document.querySelector(".play .current");
-    const playPrevious = document.querySelector(".play .previous");
-    const studyCurrent = document.querySelector(".study .current");
-    const studyPrevious = document.querySelector(".study .previous");
-    const exerciseCurrent = document.querySelector(".exercise .current");
-    const exercisePrevious = document.querySelector(".exercise .previous");
-    const socialCurrent = document.querySelector(".social .current");
-    const socialPrevious = document.querySelector(".social .previous");
-    const selfcareCurrent = document.querySelector(".selfcare .current");
-    const selfcarePrevious = document.querySelector(".selfcare .previous");
+    const timeframes = document.querySelectorAll(".timeframe")
+    let activeTimeframe = timeframes[0];
+    function setActive(timeframe) {
+        activeTimeframe.classList.toggle("color-white")
+        timeframe.classList.toggle("color-white")
+        activeTimeframe = timeframe
+    }
+    function setStat(timeframe) {
+        data.forEach(cardstat => {
+            const previous = document.querySelector(`.${cardstat["title"]} .previous`)
+            const current = document.querySelector(`.${cardstat["title"]} .current`)
+            current.innerText = cardstat["timeframes"][`${timeframe.dataset.name}`]["current"]+"hrs"
+            previous.innerText = `Last ${timeframe.dataset.shortname} - ` + cardstat["timeframes"][`${timeframe.dataset.name}`]["previous"]+"hrs"
+        })
+    }
+    timeframes.forEach(timeframe => timeframe.addEventListener('click',event => {
+        setStat(timeframe)
+        setActive(timeframe)
+    }))
+    setStat(timeframes[0])
 }

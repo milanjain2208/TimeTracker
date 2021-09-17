@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./index.css">
+  <script src="data.js"></script>
   <script src="index.js"></script>
   
   <title>Frontend Mentor | Time tracking dashboard</title>
@@ -37,9 +38,9 @@
         </div>
       </div>
       <div class="period">
-        <div id="daily" style="margin-bottom: 1em;">Daily</div>
-        <div id="weekly">Weekly</div>
-        <div id="montly" style="margin-top: 1em;">Monthly</div>
+        <div class="timeframe daily color-white" data-name="daily" data-shortname="day" style="margin-bottom: 1em;">Daily</div>
+        <div class="timeframe weekly" data-name="weekly" data-shortname="week">Weekly</div>
+        <div class="timeframe montly" data-name="monthly" data-shortname="month" style="margin-top: 1em;">Monthly</div>
       </div>
     </div>
     <div class="card work">
@@ -54,8 +55,8 @@
           </div>
         </div>
         <div class='card-stats'>
-          <div class="current">32 hrs</div>
-          <div class='previous'>Last Week - 36hrs</div>
+          <div class="current"></div>
+          <div class='previous'></div>
         </div>
       </div>
     </div>
