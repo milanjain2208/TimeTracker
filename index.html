@@ -16,22 +16,24 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { 
+      font-size: 11px; 
+      position: absolute;
+      top: 100%%
+      width: 100%;
+      text-align: center;
+    }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Milan Jain</a>.
-  </div>
   <div class="container">
     <div class="card person">
       <div class="profile">
         <div class="profile-photo">
           <img src="./images/image-jeremy.png" alt="">
         </div>
-        <div style="margin-top: 30%;">
+        <div class="report-for">
           <p style="margin: 0px; color: rgb(206, 206, 206);">Report for</p>
           <div class='name' style="color: white;">
             <h1 style="margin: 0px">
@@ -41,9 +43,9 @@
         </div>
       </div>
       <div class="period">
-        <div class="timeframe daily color-white" data-name="daily" data-shortname="day" style="margin-bottom: 1em;">Daily</div>
+        <div class="timeframe daily color-white" data-name="daily" data-shortname="day">Daily</div>
         <div class="timeframe weekly" data-name="weekly" data-shortname="week">Weekly</div>
-        <div class="timeframe montly" data-name="monthly" data-shortname="month" style="margin-top: 1em;">Monthly</div>
+        <div class="timeframe monthly" data-name="monthly" data-shortname="month">Monthly</div>
       </div>
     </div>
     <div class="card work">
@@ -156,6 +158,10 @@
         </div>
       </div>
     </div>
+  </div>
+      <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Milan Jain</a>.
   </div>
 </body>
 </html>
